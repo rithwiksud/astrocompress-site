@@ -1,53 +1,50 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# AstroCompress: Neural Compression for Astronomical Imagery
 
+A benchmark dataset and neural compression challenge for astronomical imaging data, featuring four new datasets with 16-bit unsigned integer imaging data from space telescopes.
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+## Project Website
 
+Visit the live project page at: [https://astrocompress.github.io](https://astrocompress.github.io)
 
+## Overview
 
-## Start using the template
-To start using the template click on `Use this Template`.
+AstroCompress provides a comprehensive benchmark for evaluating neural and classical compression methods on astronomical imagery. The dataset includes multi-purpose compression challenges designed specifically for the unique characteristics of astrophysics data.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## Dataset Features
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+- **4 new astronomical datasets** with 16-bit unsigned integer imaging data
+- **Multi-purpose compression** evaluation framework  
+- **Neural and classical methods** comparison
+- **Space telescope data** from various astronomical surveys
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+## Repository Contents
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
+- `index.html` - Main project webpage
+- `static/` - Website assets (CSS, JS, images, videos)
+- `arxiv_astrocompress_tex/` - LaTeX source files for the academic paper
+- Research paper figures and visualizations
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+## Local Development
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+To run the website locally:
+
+1. Clone this repository
+2. Open `index.html` in a web browser
+3. Or serve with a local web server for full functionality
+
+## Citation
+
+If you use AstroCompress in your research, please cite our work:
+
+```bibtex
+@article{astrocompress2024,
+  title={AstroCompress: Neural Compression for Astronomical Imagery},
+  author={[Author names]},
+  journal={[Journal/Conference]},
+  year={2024}
+}
+```
+
+## Contact
+
+For questions about the dataset or benchmark, please visit our project website or open an issue in this repository.
