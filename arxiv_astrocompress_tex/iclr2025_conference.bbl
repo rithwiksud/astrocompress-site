@@ -1,0 +1,394 @@
+\begin{thebibliography}{70}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agustsson et~al.(2020)Agustsson, Minnen, Johnston, Ballé, Hwang, and Toderici]{agustsson2020scale}
+Eirikur Agustsson, David Minnen, Nick Johnston, Johannes Ballé, Sung~Jin Hwang, and George Toderici.
+\newblock Scale-space flow for end-to-end optimized video compression.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  8503--8512, 2020.
+
+\bibitem[Bai et~al.(2022)Bai, Liu, Wang, Ji, Wu, and Gao]{bai2022}
+Yuanchao Bai, Xianming Liu, Kai Wang, Xiangyang Ji, Xiaolin Wu, and Wen Gao.
+\newblock Deep lossy plus residual coding for lossless and near-lossless image compression.
+\newblock 2022.
+
+\bibitem[Ball{\'e} et~al.(2017)Ball{\'e}, Laparra, and Simoncelli]{balle2017end}
+Johannes Ball{\'e}, Valero Laparra, and Eero~P Simoncelli.
+\newblock End-to-end optimized image compression.
+\newblock \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[Bezerra et~al.(2017)Bezerra, Arcanjo, Ibarra, Kantor, Lambert, Kollross, Astudillo, Sobhani, Jaque, Petravick, Morgan, and Lopez]{Bezerra}
+Jeronimo Bezerra, Vinicius Arcanjo, Julio Ibarra, Jeff Kantor, Ron Lambert, Matt Kollross, Albert Astudillo, Shahram Sobhani, Sandra Jaque, Donald Petravick, Heidi Morgan, and Luiz Lopez.
+\newblock International networking in support of extremely large astronomical data-centric operations.
+\newblock In \emph{Astronomical Data Analysis Software and Systems (ADASS XXVII) conference}, Santiago, Chile, 10/2017 2017.
+
+\bibitem[{Borucki} et~al.(2010){Borucki}, {Koch}, {Basri}, {Batalha}, {Brown}, {Caldwell}, {Caldwell}, {Christensen-Dalsgaard}, {Cochran}, {DeVore}, {Dunham}, {Dupree}, {Gautier}, {Geary}, {Gilliland}, {Gould}, {Howell}, {Jenkins}, {Kondo}, {Latham}, {Marcy}, {Meibom}, {Kjeldsen}, {Lissauer}, {Monet}, {Morrison}, {Sasselov}, {Tarter}, {Boss}, {Brownlee}, {Owen}, {Buzasi}, {Charbonneau}, {Doyle}, {Fortney}, {Ford}, {Holman}, {Seager}, {Steffen}, {Welsh}, {Rowe}, {Anderson}, {Buchhave}, {Ciardi}, {Walkowicz}, {Sherry}, {Horch}, {Isaacson}, {Everett}, {Fischer}, {Torres}, {Johnson}, {Endl}, {MacQueen}, {Bryson}, {Dotson}, {Haas}, {Kolodziejczak}, {Van Cleve}, {Chandrasekaran}, {Twicken}, {Quintana}, {Clarke}, {Allen}, {Li}, {Wu}, {Tenenbaum}, {Verner}, {Bruhweiler}, {Barnes}, and {Prsa}]{2010Sci...327..977B}
+William~J. {Borucki}, David {Koch}, Gibor {Basri}, Natalie {Batalha}, Timothy {Brown}, Douglas {Caldwell}, John {Caldwell}, J{\o}rgen {Christensen-Dalsgaard}, William~D. {Cochran}, Edna {DeVore}, Edward~W. {Dunham}, Andrea~K. {Dupree}, Thomas~N. {Gautier}, John~C. {Geary}, Ronald {Gilliland}, Alan {Gould}, Steve~B. {Howell}, Jon~M. {Jenkins}, Yoji {Kondo}, David~W. {Latham}, Geoffrey~W. {Marcy}, S{\o}ren {Meibom}, Hans {Kjeldsen}, Jack~J. {Lissauer}, David~G. {Monet}, David {Morrison}, Dimitar {Sasselov}, Jill {Tarter}, Alan {Boss}, Don {Brownlee}, Toby {Owen}, Derek {Buzasi}, David {Charbonneau}, Laurance {Doyle}, Jonathan {Fortney}, Eric~B. {Ford}, Matthew~J. {Holman}, Sara {Seager}, Jason~H. {Steffen}, William~F. {Welsh}, Jason {Rowe}, Howard {Anderson}, Lars {Buchhave}, David {Ciardi}, Lucianne {Walkowicz}, William {Sherry}, Elliott {Horch}, Howard {Isaacson}, Mark~E. {Everett}, Debra {Fischer}, Guillermo {Torres}, John~Asher {Johnson}, Michael {Endl}, Phillip {MacQueen}, Stephen~T. {Bryson}, Jessie
+  {Dotson}, Michael {Haas}, Jeffrey {Kolodziejczak}, Jeffrey {Van Cleve}, Hema {Chandrasekaran}, Joseph~D. {Twicken}, Elisa~V. {Quintana}, Bruce~D. {Clarke}, Christopher {Allen}, Jie {Li}, Haley {Wu}, Peter {Tenenbaum}, Ekaterina {Verner}, Frederick {Bruhweiler}, Jason {Barnes}, and Andrej {Prsa}.
+\newblock {Kepler Planet-Detection Mission: Introduction and First Results}.
+\newblock \emph{Science}, 327\penalty0 (5968):\penalty0 977, February 2010.
+\newblock \doi{10.1126/science.1185402}.
+
+\bibitem[Cao et~al.(2024)Cao, Tan, Gao, Xu, Chen, Heng, and Li]{cao2024survey}
+Hanqun Cao, Cheng Tan, Zhangyang Gao, Yilun Xu, Guangyong Chen, Pheng-Ann Heng, and Stan~Z Li.
+\newblock A survey on generative diffusion models.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering}, 2024.
+
+\bibitem[Carleo et~al.(2019)Carleo, Cirac, Cranmer, Daudet, Schuld, Tishby, Vogt-Maranto, and Zdeborov\'a]{RevModPhys.91.045002}
+Giuseppe Carleo, Ignacio Cirac, Kyle Cranmer, Laurent Daudet, Maria Schuld, Naftali Tishby, Leslie Vogt-Maranto, and Lenka Zdeborov\'a.
+\newblock Machine learning and the physical sciences.
+\newblock \emph{Rev. Mod. Phys.}, 91:\penalty0 045002, Dec 2019.
+\newblock \doi{10.1103/RevModPhys.91.045002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.91.045002}.
+
+\bibitem[{CCSDS}(2022)]{ccsds2022}
+{CCSDS}.
+\newblock {Lossless Multispectral and Hyperspectral Image Compression}, 2022.
+\newblock URL \url{https://public.ccsds.org/Pubs/120x2g2.pdf}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[{CCSDS}(2024)]{ccsds2024}
+{CCSDS}.
+\newblock Consultative committee for space data systems, 2024.
+\newblock URL \url{https://public.ccsds.org/default.aspx}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[Child et~al.(2019)Child, Gray, Radford, and Sutskever]{child2019generating}
+Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever.
+\newblock Generating long sequences with sparse transformers.
+\newblock \emph{arXiv preprint arXiv:1904.10509}, 2019.
+
+\bibitem[Choi et~al.(2021)Choi, Churchill, Gong, Ku, Lee, Rangarajan, Ranka, Pugmire, Chang, and Klasky]{choi2021neural}
+Jong Choi, Michael Churchill, Qian Gong, Seung-Hoe Ku, Jaemoon Lee, Anand Rangarajan, Sanjay Ranka, Dave Pugmire, CS~Chang, and Scott Klasky.
+\newblock Neural data compression for physics plasma simulation.
+\newblock In \emph{Neural Compression: From Information Theory to Applications--Workshop@ ICLR 2021}, 2021.
+
+\bibitem[{Farnes} et~al.(2018){Farnes}, {Mort}, {Dulwich}, {Salvini}, and {Armour}]{2018Galax...6..120F}
+Jamie {Farnes}, Ben {Mort}, Fred {Dulwich}, Stef {Salvini}, and Wes {Armour}.
+\newblock {Science Pipelines for the Square Kilometre Array}.
+\newblock \emph{Galaxies}, 6\penalty0 (4):\penalty0 120, November 2018.
+\newblock \doi{10.3390/galaxies6040120}.
+
+\bibitem[{Gardner} et~al.(2023)]{2023PASP..135f8001G}
+Jonathan~P. {Gardner} et~al.
+\newblock {The James Webb Space Telescope Mission}.
+\newblock \emph{PASP}, 135\penalty0 (1048):\penalty0 068001, June 2023.
+\newblock \doi{10.1088/1538-3873/acd1b5}.
+
+\bibitem[{Google}(2024)]{neuralmapping2024}
+{Google}.
+\newblock {Neural Mapping}, 2024.
+\newblock URL \url{https://sites.research.google/neural-mapping/}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[{Gulick} et~al.(2022){Gulick}, {Lu}, {Beckwith}, {Bloom}, and {Nir}]{2022cosp...44.1985G}
+Hannah {Gulick}, Jessica {Lu}, Steve {Beckwith}, Joshua {Bloom}, and Guy {Nir}.
+\newblock {CubeSat for Rapid IR and Optical Surveys}.
+\newblock In \emph{44th COSPAR Scientific Assembly. Held 16-24 July}, volume~44, pp.\  1985, July 2022.
+
+\bibitem[{Hayat} et~al.(2021){Hayat}, {Stein}, {Harrington}, {Luki{\'c}}, and {Mustafa}]{2021ApJ...911L..33H}
+Md~Abul {Hayat}, George {Stein}, Peter {Harrington}, Zarija {Luki{\'c}}, and Mustafa {Mustafa}.
+\newblock {Self-supervised Representation Learning for Astronomical Images}.
+\newblock \emph{ApJ Letters}, 911\penalty0 (2):\penalty0 L33, April 2021.
+\newblock \doi{10.3847/2041-8213/abf2c7}.
+
+\bibitem[Hayne et~al.(2021)Hayne, Clyne, and Li]{hayne2021using}
+Lucas Hayne, John Clyne, and Shaomeng Li.
+\newblock Using neural networks for two dimensional scientific data compression.
+\newblock In \emph{2021 IEEE International Conference on Big Data (Big Data)}, pp.\  2956--2965. IEEE, 2021.
+
+\bibitem[He et~al.(2022)He, Yang, Peng, Ma, Qin, and Wang]{he2022elic}
+Dailan He, Ziming Yang, Weikun Peng, Rui Ma, Hongwei Qin, and Yan Wang.
+\newblock Elic: Efficient learned image compression with unevenly grouped space-channel contextual adaptive coding.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  5718--5727, 2022.
+
+\bibitem[Hoogeboom et~al.(2019)Hoogeboom, Peters, Van Den~Berg, and Welling]{hoogeboom2019integer}
+Emiel Hoogeboom, Jorn Peters, Rianne Van Den~Berg, and Max Welling.
+\newblock Integer discrete flows and lossless compression.
+\newblock \emph{Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[Huang \& Hoefler(2023)Huang and Hoefler]{huang2023compressing}
+Langwen Huang and Torsten Hoefler.
+\newblock Compressing multidimensional weather and climate data into neural networks.
+\newblock In \emph{The Eleventh International Conference on Learning Representations}, 2023.
+
+\bibitem[Jenkins \& Dunnuck(2011)Jenkins and Dunnuck]{10.1117/12.897767}
+Jon~M. Jenkins and Jeb Dunnuck.
+\newblock {The little photometer that could: technical challenges and science results from the Kepler Mission}.
+\newblock In Howard~A. MacEwen and James~B. Breckinridge (eds.), \emph{UV/Optical/IR Space Telescopes and Instruments: Innovative Technologies and Concepts V}, volume 8146, pp.\  814602. International Society for Optics and Photonics, SPIE, 2011.
+\newblock \doi{10.1117/12.897767}.
+\newblock URL \url{https://doi.org/10.1117/12.897767}.
+
+\bibitem[{JWST}(2024)]{jwst2024}
+{JWST}.
+\newblock {WEBB Space Telescope}, 2024.
+\newblock URL \url{https://jwst-docs.stsci.edu/}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[{Kahn} et~al.(2010){Kahn}, {Kurita}, {Gilmore}, {Nordby}, {O'Connor}, {Schindler}, {Oliver}, {Van Berg}, {Olivier}, {Riot}, {Antilogus}, {Schalk}, {Huffer}, {Bowden}, {Singal}, and {Foss}]{2010SPIE.7735E..0JK}
+S.~M. {Kahn}, N.~{Kurita}, K.~{Gilmore}, M.~{Nordby}, P.~{O'Connor}, R.~{Schindler}, J.~{Oliver}, R.~{Van Berg}, S.~{Olivier}, V.~{Riot}, P.~{Antilogus}, T.~{Schalk}, M.~{Huffer}, G.~{Bowden}, J.~{Singal}, and M.~{Foss}.
+\newblock {Design and development of the 3.2 gigapixel camera for the Large Synoptic Survey Telescope}.
+\newblock In Ian~S. {McLean}, Suzanne~K. {Ramsay}, and Hideki {Takami} (eds.), \emph{Ground-based and Airborne Instrumentation for Astronomy III}, volume 7735 of \emph{Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series}, pp.\  77350J, July 2010.
+\newblock \doi{10.1117/12.857920}.
+
+\bibitem[{Khujaev} et~al.(2023){Khujaev}, {Tsoy}, and {Baek}]{yolo}
+Nodirkhuja {Khujaev}, Roman {Tsoy}, and Seungryul {Baek}.
+\newblock {AstroYOLO}: {L}earning {A}stronomy {M}ulti-tasks in a {S}ingle {U}nified {R}eal-{T}ime {F}ramework.
+\newblock In \emph{Machine Learning and the Physical Sciences Workshop, NeurIPS}, 2023.
+
+\bibitem[Kingma et~al.(2021)Kingma, Salimans, Poole, and Ho]{kingma2021variational}
+Diederik Kingma, Tim Salimans, Ben Poole, and Jonathan Ho.
+\newblock Variational diffusion models.
+\newblock \emph{Advances in neural information processing systems}, 34:\penalty0 21696--21707, 2021.
+
+\bibitem[{Leung} \& {Bovy}(2019){Leung} and {Bovy}]{2019MNRAS.483.3255L}
+Henry~W. {Leung} and Jo~{Bovy}.
+\newblock {Deep learning of multi-element abundances from high-resolution spectroscopic data}.
+\newblock \emph{MNRAS}, 483\penalty0 (3):\penalty0 3255--3277, March 2019.
+\newblock \doi{10.1093/mnras/sty3217}.
+
+\bibitem[Liu et~al.(2022)Liu, Mandt, and Van~den Broeck]{liu2022lossless}
+Anji Liu, Stephan Mandt, and Guy Van~den Broeck.
+\newblock Lossless compression with probabilistic circuits.
+\newblock In \emph{Proceedings of the International Conference on Learning Representations (ICLR)}, 2022.
+
+\bibitem[Lu et~al.(2019)Lu, Ouyang, Xu, Zhang, Cai, and Gao]{lu2019dvc}
+Guo Lu, Wanli Ouyang, Dong Xu, Xiaoyun Zhang, Chunlei Cai, and Zhiyong Gao.
+\newblock Dvc: An end-to-end deep video compression framework.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pp.\  11006--11015, 2019.
+
+\bibitem[Maireles-Gonz{\'a}lez et~al.(2022)Maireles-Gonz{\'a}lez, Bartrina-Rapesta, Hern{\'a}ndez-Cabronero, and Serra-Sagrist{\`a}]{maireles2022analysis}
+{\`O}scar Maireles-Gonz{\'a}lez, Joan Bartrina-Rapesta, Miguel Hern{\'a}ndez-Cabronero, and Joan Serra-Sagrist{\`a}.
+\newblock Analysis of lossless compressors applied to integer and floating-point astronomical data.
+\newblock In \emph{2022 Data Compression Conference (DCC)}, pp.\  389--398. IEEE, 2022.
+
+\bibitem[Maireles-Gonz{\'a}lez et~al.(2023)Maireles-Gonz{\'a}lez, Bartrina-Rapesta, Hern{\'a}ndez-Cabronero, and Serra-Sagrist{\`a}]{maireles2023efficient}
+{\`O}scar Maireles-Gonz{\'a}lez, Joan Bartrina-Rapesta, Miguel Hern{\'a}ndez-Cabronero, and Joan Serra-Sagrist{\`a}.
+\newblock Efficient lossless compression of integer astronomical data.
+\newblock \emph{Publications of the Astronomical Society of the Pacific}, 135\penalty0 (1051):\penalty0 094502, 2023.
+
+\bibitem[Mandeel et~al.(2021)Mandeel, Ahmad, Khalid, and Isa]{mandeel2021comparative}
+Thulfiqar~H Mandeel, Muhammad~Imran Ahmad, Noor Aldeen~A Khalid, and Mohd Nazrin~Md Isa.
+\newblock A comparative study on lossless compression mode in webp, better portable graphics (bpg), and jpeg xl image compression algorithms.
+\newblock In \emph{2021 8th International Conference on Computer and Communication Engineering (ICCCE)}, pp.\  17--22. IEEE, 2021.
+
+\bibitem[{MAST}(2024)]{mast2024}
+{MAST}.
+\newblock {Mikulski Archive for Space Telescopes (MAST)}, 2024.
+\newblock URL \url{https://mast.stsci.edu/}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[Mentzer et~al.(2019)Mentzer, Agustsson, Tschannen, Timofte, and Gool]{mentzer2019practical}
+Fabian Mentzer, Eirikur Agustsson, Michael Tschannen, Radu Timofte, and Luc~Van Gool.
+\newblock Practical full resolution learned lossless image compression.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pp.\  10629--10638, 2019.
+
+\bibitem[Mentzer et~al.(2022)Mentzer, Toderici, Minnen, Hwang, Caelles, Lucic, and Agustsson]{mentzer2022vct}
+Fabian Mentzer, George Toderici, David Minnen, Sung-Jin Hwang, Sergi Caelles, Mario Lucic, and Eirikur Agustsson.
+\newblock Vct: A video compression transformer.
+\newblock \emph{arXiv preprint arXiv:2206.07307}, 2022.
+
+\bibitem[Minnen(2021)]{minnen_current_2021}
+David Minnen.
+\newblock Current {Frontiers} {In} {Neural} {Image} {Compression}: {The} {Rate}-{Distortion}-{Computation} {Trade}-{Off} {And} {Optimizing} {For} {Subjective} {Visual} {Quality}, 2021.
+\newblock URL \url{https://www.youtube.com/watch?v=84XkOlBhOas}.
+
+\bibitem[{NASA}(2014)]{nasa2014}
+{NASA}.
+\newblock {A Look at the Numbers as NASA’s Hubble Space Telescope Enters its 25th Year}, 2014.
+\newblock URL \url{https://science.nasa.gov/missions/hubble/a-look-at-the-numbers-as-nasas-hubble-space-telescope-enters-its-25th-year/}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[NASA(2024)]{NASA_2024}
+NASA.
+\newblock Audit of the nancy grace roman space telescope project, Jul 2024.
+\newblock URL \url{https://oig.nasa.gov/wp-content/uploads/2024/07/ig-24-014.pdf}.
+
+\bibitem[{NIH}(2024)]{nih2024}
+{NIH}.
+\newblock {Genomic Data Science}, 2024.
+\newblock URL \url{https://www.genome.gov/about-genomics/fact-sheets/Genomic-Data-Science}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[{Oke} et~al.(1995){Oke}, {Cohen}, {Carr}, {Cromer}, {Dingizian}, {Harris}, {Labrecque}, {Lucinio}, {Schaal}, {Epps}, and {Miller}]{1995PASP..107..375O}
+J.~B. {Oke}, J.~G. {Cohen}, M.~{Carr}, J.~{Cromer}, A.~{Dingizian}, F.~H. {Harris}, S.~{Labrecque}, R.~{Lucinio}, W.~{Schaal}, H.~{Epps}, and J.~{Miller}.
+\newblock {The Keck Low-Resolution Imaging Spectrometer}.
+\newblock \emph{PASP}, 107:\penalty0 375, April 1995.
+\newblock \doi{10.1086/133562}.
+
+\bibitem[Pata \& Schindler(2015)Pata and Schindler]{pata2015astronomical}
+Petr Pata and Jaromir Schindler.
+\newblock Astronomical context coder for image compression.
+\newblock \emph{Experimental Astronomy}, 39:\penalty0 495--512, 2015.
+
+\bibitem[{Pence} et~al.(2009){Pence}, {Seaman}, and {White}]{pence2009lossless}
+W.~D. {Pence}, R.~{Seaman}, and R.~L. {White}.
+\newblock {Lossless Astronomical Image Compression and the Effects of Noise}.
+\newblock \emph{PASP}, 121\penalty0 (878):\penalty0 414, April 2009.
+\newblock \doi{10.1086/599023}.
+
+\bibitem[{Pence} et~al.(2010){Pence}, {Chiappetti}, {Page}, {Shaw}, and {Stobie}]{2010A&A...524A..42P}
+W.~D. {Pence}, L.~{Chiappetti}, C.~G. {Page}, R.~A. {Shaw}, and E.~{Stobie}.
+\newblock {Definition of the Flexible Image Transport System (FITS), version 3.0}.
+\newblock \emph{AAP}, 524:\penalty0 A42, December 2010.
+\newblock \doi{10.1051/0004-6361/201015362}.
+
+\bibitem[photutils(2024)]{photutils}
+photutils.
+\newblock {photutils, An Astropy Package for Photometry}, 2024.
+\newblock URL \url{https://photutils.readthedocs.io/en/stable/}.
+\newblock Accessed: 2024-11-28.
+
+\bibitem[Rezende \& Mohamed(2015)Rezende and Mohamed]{rezende2015variational}
+Danilo Rezende and Shakir Mohamed.
+\newblock Variational inference with normalizing flows.
+\newblock In \emph{International conference on machine learning}, pp.\  1530--1538. PMLR, 2015.
+
+\bibitem[{Ricker} et~al.(2015){Ricker}, {Winn}, {Vanderspek}, {Latham}, {Bakos}, {Bean}, {Berta-Thompson}, {Brown}, {Buchhave}, {Butler}, {Butler}, {Chaplin}, {Charbonneau}, {Christensen-Dalsgaard}, {Clampin}, {Deming}, {Doty}, {De Lee}, {Dressing}, {Dunham}, {Endl}, {Fressin}, {Ge}, {Henning}, {Holman}, {Howard}, {Ida}, {Jenkins}, {Jernigan}, {Johnson}, {Kaltenegger}, {Kawai}, {Kjeldsen}, {Laughlin}, {Levine}, {Lin}, {Lissauer}, {MacQueen}, {Marcy}, {McCullough}, {Morton}, {Narita}, {Paegert}, {Palle}, {Pepe}, {Pepper}, {Quirrenbach}, {Rinehart}, {Sasselov}, {Sato}, {Seager}, {Sozzetti}, {Stassun}, {Sullivan}, {Szentgyorgyi}, {Torres}, {Udry}, and {Villasenor}]{2015JATIS...1a4003R}
+George~R. {Ricker}, Joshua~N. {Winn}, Roland {Vanderspek}, David~W. {Latham}, G{\'a}sp{\'a}r~{\'A}. {Bakos}, Jacob~L. {Bean}, Zachory~K. {Berta-Thompson}, Timothy~M. {Brown}, Lars {Buchhave}, Nathaniel~R. {Butler}, R.~Paul {Butler}, William~J. {Chaplin}, David {Charbonneau}, J{\o}rgen {Christensen-Dalsgaard}, Mark {Clampin}, Drake {Deming}, John {Doty}, Nathan {De Lee}, Courtney {Dressing}, Edward~W. {Dunham}, Michael {Endl}, Francois {Fressin}, Jian {Ge}, Thomas {Henning}, Matthew~J. {Holman}, Andrew~W. {Howard}, Shigeru {Ida}, Jon~M. {Jenkins}, Garrett {Jernigan}, John~Asher {Johnson}, Lisa {Kaltenegger}, Nobuyuki {Kawai}, Hans {Kjeldsen}, Gregory {Laughlin}, Alan~M. {Levine}, Douglas {Lin}, Jack~J. {Lissauer}, Phillip {MacQueen}, Geoffrey {Marcy}, Peter~R. {McCullough}, Timothy~D. {Morton}, Norio {Narita}, Martin {Paegert}, Enric {Palle}, Francesco {Pepe}, Joshua {Pepper}, Andreas {Quirrenbach}, Stephen~A. {Rinehart}, Dimitar {Sasselov}, Bun'ei {Sato}, Sara {Seager}, Alessandro {Sozzetti}, Keivan~G.
+  {Stassun}, Peter {Sullivan}, Andrew {Szentgyorgyi}, Guillermo {Torres}, Stephane {Udry}, and Joel {Villasenor}.
+\newblock {Transiting Exoplanet Survey Satellite (TESS)}.
+\newblock \emph{Journal of Astronomical Telescopes, Instruments, and Systems}, 1:\penalty0 014003, January 2015.
+\newblock \doi{10.1117/1.JATIS.1.1.014003}.
+
+\bibitem[{Rockosi} et~al.(2010)]{2010SPIE.7735E..0RR}
+C.~{Rockosi} et~al.
+\newblock {The low-resolution imaging spectrograph red channel CCD upgrade: fully depleted, high-resistivity CCDs for Keck}.
+\newblock In Ian~S. {McLean}, Suzanne~K. {Ramsay}, and Hideki {Takami} (eds.), \emph{Ground-based and Airborne Instrumentation for Astronomy III}, volume 7735 of \emph{Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series}, pp.\  77350R, July 2010.
+\newblock \doi{10.1117/12.856818}.
+
+\bibitem[Roy et~al.(2021)Roy, Saffar, Vaswani, and Grangier]{roy2021efficient}
+Aurko Roy, Mohammad Saffar, Ashish Vaswani, and David Grangier.
+\newblock Efficient content-based sparse attention with routing transformers.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 9:\penalty0 53--68, 2021.
+
+\bibitem[{Sako} et~al.(2018){Sako}, {Bassett}, {Becker}, {Brown}, {Campbell}, {Wolf}, {Cinabro}, {D'Andrea}, {Dawson}, {DeJongh}, {Depoy}, {Dilday}, {Doi}, {Filippenko}, {Fischer}, {Foley}, {Frieman}, {Galbany}, {Garnavich}, {Goobar}, {Gupta}, {Hill}, {Hayden}, {Hlozek}, {Holtzman}, {Hopp}, {Jha}, {Kessler}, {Kollatschny}, {Leloudas}, {Marriner}, {Marshall}, {Miquel}, {Morokuma}, {Mosher}, {Nichol}, {Nordin}, {Olmstead}, {{\"O}stman}, {Prieto}, {Richmond}, {Romani}, {Sollerman}, {Stritzinger}, {Schneider}, {Smith}, {Wheeler}, {Yasuda}, and {Zheng}]{2018PASP..130f4002S}
+Masao {Sako}, Bruce {Bassett}, Andrew~C. {Becker}, Peter~J. {Brown}, Heather {Campbell}, Rachel {Wolf}, David {Cinabro}, Chris~B. {D'Andrea}, Kyle~S. {Dawson}, Fritz {DeJongh}, Darren~L. {Depoy}, Ben {Dilday}, Mamoru {Doi}, Alexei~V. {Filippenko}, John~A. {Fischer}, Ryan~J. {Foley}, Joshua~A. {Frieman}, Lluis {Galbany}, Peter~M. {Garnavich}, Ariel {Goobar}, Ravi~R. {Gupta}, Gary~J. {Hill}, Brian~T. {Hayden}, Ren{\'e}e {Hlozek}, Jon~A. {Holtzman}, Ulrich {Hopp}, Saurabh~W. {Jha}, Richard {Kessler}, Wolfram {Kollatschny}, Giorgos {Leloudas}, John {Marriner}, Jennifer~L. {Marshall}, Ramon {Miquel}, Tomoki {Morokuma}, Jennifer {Mosher}, Robert~C. {Nichol}, Jakob {Nordin}, Matthew~D. {Olmstead}, Linda {{\"O}stman}, Jose~L. {Prieto}, Michael {Richmond}, Roger~W. {Romani}, Jesper {Sollerman}, Max {Stritzinger}, Donald~P. {Schneider}, Mathew {Smith}, J.~Craig {Wheeler}, Naoki {Yasuda}, and Chen {Zheng}.
+\newblock {The Data Release of the Sloan Digital Sky Survey-II Supernova Survey}.
+\newblock \emph{PASP}, 130\penalty0 (988):\penalty0 064002, June 2018.
+\newblock \doi{10.1088/1538-3873/aab4e0}.
+
+\bibitem[Salimans \& Ho(2022)Salimans and Ho]{salimans2022progressive}
+Tim Salimans and Jonathan Ho.
+\newblock Progressive distillation for fast sampling of diffusion models.
+\newblock \emph{arXiv preprint arXiv:2202.00512}, 2022.
+
+\bibitem[Salimans et~al.(2017)Salimans, Karpathy, Chen, and Kingma]{pixelcn}
+Tim Salimans, Andrej Karpathy, Xi~Chen, and Diederik~P. Kingma.
+\newblock Pixelcnn++: Improving the pixelcnn with discretized logistic mixture likelihood and other modifications, 2017.
+\newblock URL \url{https://arxiv.org/abs/1701.05517}.
+
+\bibitem[{Seaman} et~al.(2010){Seaman}, {Pence}, and {White}]{2010ascl.soft10002S}
+Rob {Seaman}, William {Pence}, and Rick {White}.
+\newblock {fpack: FITS Image Compression Program}.
+\newblock Astrophysics Source Code Library, record ascl:1010.002, October 2010.
+
+\bibitem[Shannon(1948)]{shannon1948mathematical}
+Claude~Elwood Shannon.
+\newblock A mathematical theory of communication.
+\newblock \emph{The Bell system technical journal}, 27\penalty0 (3):\penalty0 379--423, 1948.
+
+\bibitem[{Sirianni} et~al.(2005){Sirianni}, {Jee}, {Ben{\'\i}tez}, {Blakeslee}, {Martel}, {Meurer}, {Clampin}, {De Marchi}, {Ford}, {Gilliland}, {Hartig}, {Illingworth}, {Mack}, and {McCann}]{2005PASP..117.1049S}
+M.~{Sirianni}, M.~J. {Jee}, N.~{Ben{\'\i}tez}, J.~P. {Blakeslee}, A.~R. {Martel}, G.~{Meurer}, M.~{Clampin}, G.~{De Marchi}, H.~C. {Ford}, R.~{Gilliland}, G.~F. {Hartig}, G.~D. {Illingworth}, J.~{Mack}, and W.~J. {McCann}.
+\newblock {The Photometric Performance and Calibration of the Hubble Space Telescope Advanced Camera for Surveys}.
+\newblock \emph{PASP}, 117\penalty0 (836):\penalty0 1049--1112, October 2005.
+\newblock \doi{10.1086/444553}.
+
+\bibitem[{Stoughton} et~al.(2002)]{2002AJ....123..485S}
+Chris {Stoughton} et~al.
+\newblock {Sloan Digital Sky Survey: Early Data Release}.
+\newblock \emph{Astronomical Journal}, 123\penalty0 (1):\penalty0 485--548, January 2002.
+\newblock \doi{10.1086/324741}.
+
+\bibitem[STSCI(2024)]{jwst}
+STSCI.
+\newblock {JWST} {D}ata {V}olume and {D}ata {E}xcess, 2024.
+\newblock \url{https://jwst-docs.stsci.edu/jwst-general-support/jwst-data-volume-and-data-excess} [Accessed: May 30, 2024].
+
+\bibitem[{Thiyagalingam} et~al.(2022){Thiyagalingam}, {Shankar}, {Fox}, and {Hey}]{2022NatRP...4..413T}
+Jeyan {Thiyagalingam}, Mallikarjun {Shankar}, Geoffrey {Fox}, and Tony {Hey}.
+\newblock {Scientific machine learning benchmarks}.
+\newblock \emph{Nature Reviews Physics}, 4\penalty0 (6):\penalty0 413--420, April 2022.
+\newblock \doi{10.1038/s42254-022-00441-7}.
+
+\bibitem[Thomas et~al.(2015)Thomas, Jenness, Economou, Greenfield, Hirst, Berry, Bray, Gray, Muna, Turner, et~al.]{thomas2015learning}
+Brian Thomas, Tim Jenness, Frossie Economou, Perry Greenfield, Paul Hirst, David~S Berry, Erik Bray, Norman Gray, Demitri Muna, James Turner, et~al.
+\newblock Learning from fits: Limitations in use in modern astronomical research.
+\newblock \emph{Astronomy and Computing}, 12:\penalty0 133--145, 2015.
+
+\bibitem[{Thompson} et~al.(1998){Thompson}, {Rieke}, {Schneider}, {Hines}, and {Corbin}]{1998ApJ...492L..95T}
+Rodger~I. {Thompson}, Marcia {Rieke}, Glenn {Schneider}, Dean~C. {Hines}, and Michael~R. {Corbin}.
+\newblock {Initial On-Orbit Performance of NICMOS}.
+\newblock \emph{APJL}, 492\penalty0 (2):\penalty0 L95--L97, January 1998.
+\newblock \doi{10.1086/311095}.
+
+\bibitem[Townsend et~al.(2019)Townsend, Bird, and Barber]{townsend2019practical}
+James Townsend, Tom Bird, and David Barber.
+\newblock Practical lossless compression with latent variables using bits back coding.
+\newblock \emph{arXiv preprint arXiv:1901.04866}, 2019.
+
+\bibitem[Ulhaq \& Akhtar(2022)Ulhaq and Akhtar]{ulhaq2022efficient}
+Anwaar Ulhaq and Naveed Akhtar.
+\newblock Efficient diffusion models for vision: A survey.
+\newblock \emph{arXiv preprint arXiv:2210.09292}, 2022.
+
+\bibitem[Villafranca et~al.(2013)Villafranca, Portell, and Garc{\'\i}a-Berro]{villafranca2013prediction}
+Alberto~G Villafranca, Jordi Portell, and Enrique Garc{\'\i}a-Berro.
+\newblock Prediction error coder: a fast lossless compression method for satellite noisy data.
+\newblock \emph{Journal of Applied Remote Sensing}, 7\penalty0 (1):\penalty0 074593--074593, 2013.
+
+\bibitem[{Wang} et~al.(2023){Wang}, {Fu}, {Du}, {Gao}, {Huang}, {Liu}, {Chandak}, {Liu}, {Van Katwyk}, {Deac}, {Anandkumar}, {Bergen}, {Gomes}, {Ho}, {Kohli}, {Lasenby}, {Leskovec}, {Liu}, {Manrai}, {Marks}, {Ramsundar}, {Song}, {Sun}, {Tang}, {Veli{\v{c}}kovi{\'c}}, {Welling}, {Zhang}, {Coley}, {Bengio}, and {Zitnik}]{2023Natur.620...47W}
+Hanchen {Wang}, Tianfan {Fu}, Yuanqi {Du}, Wenhao {Gao}, Kexin {Huang}, Ziming {Liu}, Payal {Chandak}, Shengchao {Liu}, Peter {Van Katwyk}, Andreea {Deac}, Anima {Anandkumar}, Karianne {Bergen}, Carla~P. {Gomes}, Shirley {Ho}, Pushmeet {Kohli}, Joan {Lasenby}, Jure {Leskovec}, Tie-Yan {Liu}, Arjun {Manrai}, Debora {Marks}, Bharath {Ramsundar}, Le~{Song}, Jimeng {Sun}, Jian {Tang}, Petar {Veli{\v{c}}kovi{\'c}}, Max {Welling}, Linfeng {Zhang}, Connor~W. {Coley}, Yoshua {Bengio}, and Marinka {Zitnik}.
+\newblock {Scientific discovery in the age of artificial intelligence}.
+\newblock \emph{Nature}, 620\penalty0 (7972):\penalty0 47--60, August 2023.
+\newblock \doi{10.1038/s41586-023-06221-2}.
+
+\bibitem[Wang et~al.(2023)Wang, Bai, Zhai, Li, Jiang, and Liu]{wang2023learning}
+Kai Wang, Yuanchao Bai, Deming Zhai, Daxin Li, Junjun Jiang, and Xianming Liu.
+\newblock Learning lossless compression for high bit-depth medical imaging.
+\newblock In \emph{2023 IEEE International conference on multimedia and expo (ICME)}, pp.\  2549--2554. IEEE, 2023.
+
+\bibitem[{Xue} et~al.(2023){Xue}, {Li}, {Patel}, and {Regier}]{2023arXiv230711122X}
+Zhiwei {Xue}, Yuhang {Li}, Yash {Patel}, and Jeffrey {Regier}.
+\newblock {Diffusion Models for Probabilistic Deconvolution of Galaxy Images}.
+\newblock \emph{arXiv e-prints}, art. arXiv:2307.11122, July 2023.
+\newblock \doi{10.48550/arXiv.2307.11122}.
+
+\bibitem[Yang et~al.(2023{\natexlab{a}})Yang, Zhang, Song, Hong, Xu, Zhao, Zhang, Cui, and Yang]{yang2023diffusion}
+Ling Yang, Zhilong Zhang, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao Zhang, Bin Cui, and Ming-Hsuan Yang.
+\newblock Diffusion models: A comprehensive survey of methods and applications.
+\newblock \emph{ACM Computing Surveys}, 56\penalty0 (4):\penalty0 1--39, 2023{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2020{\natexlab{a}})Yang, Yang, Marino, and Mandt]{yang2021hierarchical}
+Ruihan Yang, Yibo Yang, Joseph Marino, and Stephan Mandt.
+\newblock Hierarchical autoregressive modeling for neural video compression.
+\newblock In \emph{International Conference on Learning Representations}, 2020{\natexlab{a}}.
+
+\bibitem[Yang \& Mandt(2023)Yang and Mandt]{yang2023computationally}
+Yibo Yang and Stephan Mandt.
+\newblock Computationally-efficient neural image compression with shallow decoders.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision}, pp.\  530--540, 2023.
+
+\bibitem[Yang et~al.(2020{\natexlab{b}})Yang, Bamler, and Mandt]{yang2020improving}
+Yibo Yang, Robert Bamler, and Stephan Mandt.
+\newblock Improving inference for neural image compression.
+\newblock In \emph{Neural Information Processing Systems (NeurIPS), 2020}, 2020{\natexlab{b}}.
+
+\bibitem[Yang et~al.(2023{\natexlab{b}})Yang, Mandt, and Theis]{yang2023introduction}
+Yibo Yang, Stephan Mandt, and Lucas Theis.
+\newblock An introduction to neural data compression.
+\newblock \emph{Foundations and Trends® in Computer Graphics and Vision}, 15\penalty0 (2):\penalty0 113--200, 2023{\natexlab{b}}.
+\newblock ISSN 1572-2740.
+\newblock \doi{10.1561/0600000107}.
+\newblock URL \url{http://dx.doi.org/10.1561/0600000107}.
+
+\bibitem[{York} et~al.(2000)]{2000AJ....120.1579Y}
+Donald~G. {York} et~al.
+\newblock {The Sloan Digital Sky Survey: Technical Summary}.
+\newblock \emph{AJ}, 120\penalty0 (3):\penalty0 1579--1587, September 2000.
+\newblock \doi{10.1086/301513}.
+
+\end{thebibliography}

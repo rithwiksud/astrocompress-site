@@ -1,0 +1,33 @@
+\section{Compression Methods}
+\label{sec:methods}
+
+% To establish baselines for future comparisons, we applied various non-neural and neural lossless compression methods to our proposed datasets.
+
+% \subsection{Neural compression methods}
+% We adopt the following neural lossless compression methods that are popular in the literature: \textbf{Integer Discrete Flows} (IDF) \citep{hoogeboom2019integer} is a flow-based model that extends the concept of normalizing flows \citep{rezende2015variational} for lossless compression. Unlike conventional normalizing flow models that operate on continuous data, IDF employs discrete bijective mappings using invertible neural networks to establish a connection between discrete pixel values and a discrete latent space. 
+%     % The model ensures discretization by incorporating integer coupling layers with a rounding operation, which can be optimized using a straight-through estimator \citep{bengio2013estimating}. For entropy coding of the discrete symbols, IDF utilizes the cumulative distribution function of the logistic distribution, which is modeled auto-regressively using factor-out layers.
+%  \textbf{L3C}~\citep{mentzer2019practical} is a VAE-based lossless image compression method that utilizes a two-part coding scheme. The main idea involves training a hierarchical VAE with discrete latent representations that capture high-level information about the input image. 
+%     % The encoder progressively downsamples and quantizes the input, yielding a series of discrete latent representations at different scales. Subsequently, the decoder constructs a channel-wise autoregressive entropy model using a logistic distribution to encode discrete pixel values conditioned on these discrete latents.
+%  \textbf{PixelCNN++}~\citep{pixelcn} is an autoregressive model that uses convolutional neural networks to model the distribution of each pixel given previous pixels using logistic distribution in a raster scan order. Given the nature of autoregressive models, PixelCNN++ can be extended for lossless compression by using the model's predicted distribution for entropy coding on each pixel given previously encoded/decoded pixels.
+
+% We also consider 4 non-neural methods as our baselines, where 3 of them are standard codecs from Joint Photographic Experts Group (JPEG) and one codec developed by Jet Propulsion Laboratory (JPL). \texttt{imagecodecs} provides necessary APIs for all the methods. Basically, we run \textbf{JPEG-XL}, \textbf{JPEG-LS}, \textbf{JPEG-2000} and \textbf{RICE} codecs under lossless mode with default setting for this task. Additionally, we also run JPEG-XL under the maximum compression ratio mode as an additional reference.
+We adopt the following neural lossless compression methods that are popular in the literature:
+
+\begin{itemize}
+    \item \textbf{Integer Discrete Flows (IDF)} is a flow-based model extending the concept of normalizing flows \citep{hoogeboom2019integer,rezende2015variational} for lossless compression. Unlike conventional normalizing flow models that operate on continuous data, IDF employs discrete bijective mappings using invertible neural networks to connect discrete pixel values with a discrete latent space.
+    
+    \item \textbf{L3C} \citet{mentzer2019practical}: L3C is a VAE-based lossless image compression method utilizing a two-part coding scheme. It involves training a hierarchical VAE with discrete latent representations to capture high-level information about the input image.
+    
+    \item \textbf{PixelCNN++} \citet{pixelcn}: PixelCNN++ is an autoregressive model using convolutional neural networks to model the distribution of each pixel given previous pixels in a raster scan order. The logistic distribution is used for this purpose. PixelCNN++ can be extended for lossless compression by employing the model's predicted distribution for entropy coding on each pixel given previously encoded/decoded pixels.
+\end{itemize}
+
+We also consider four non-neural methods as baselines, including three standard codecs from the Joint Photographic Experts Group (JPEG) and one codec developed by the Jet Propulsion Laboratory (JPL). The \texttt{imagecodecs} library provides the necessary APIs for all methods. Specifically, we run \textbf{JPEG-XL}, \textbf{JPEG-LS}, \textbf{JPEG-2000}, and \textbf{RICE} codecs in lossless mode with default settings. Additionally, we run JPEG-XL under the maximum compression ratio mode as an extra reference.
+
+\subsection{Handling 16-bit data}
+\label{sec:handling16b}
+
+Most neural lossless compression methods were designed with RGB image compression in mind, and hence operate on 8-bit (unsigned) integers. 
+Most neural lossless compression methods compute a categorical probability over the $2^8=256$ possible discrete values for entropy coding; however naively doing so for 16-bit symbols would amount to $2^{16}$ values, which can be computationally challenging. 
+
+To investigate the effect of this increase range of pixel values, we treat each 16-bit ``pixel'' as consisting of two sub-pixels containing the most significant byte (MSB) and least significant byte (LSB) of the 16-bits. Doing this converts the original 1-channel 16-bit image to a 2-channel 8-bit image. We evaluate compression performances on both variants of the image by extend these methods to handle 16-bit input. This did not seem to significantly affect the performance for IDF and, in some cases, yielded better compression performance compared to using the original 16-bit image.
+\label{sec:traditional}

@@ -1,0 +1,62 @@
+\section{AstroCompress Corpus}\label{sec:corpus}
+
+Our central contribution is the AstroCompress corpus, curated to capture a broad range of real astrophysical imaging data and presented to enable the exploration of neural compression.
+% which aims to cover the widest range of observation conditions relevant to the astrophysics community and be suitable for the exploration of deep-learning-based compression approaches.
+The corpus is released on HuggingFace and can be easily accessed using Python, with code examples in the Supplementary Material. 
+The corpus consists of 5 distinct datasets, spanning a variety of observing conditions from space and from Earth, types of detector technology, and large dynamic ranges.
+The quantity of data is three orders of magnitude larger and more varied than previous compression-focused corpora \citep{pata2015astronomical,maireles2023efficient} to ensure ample training data for ML-based approaches. In contrast to previous corpora containing only ground-based data, our dataset has a strong focus on space-based data, for which improved compression is much more critical.
+Besides the typical 2D imaging data, we also include higher-dimensional (3D and 4D) data cubes containing multiple images of the same spatial origin but along different wavelength and/or temporal dimensions. The raw data source for the data cubes provides only single timestep images, which were then scraped, mosaicked spatially to create larger images, and then stacked across time.
+These data cubes are a unique feature of our corpus, offering compression algorithms the opportunity to exploit redundancies along additional dimensions to achieve higher compression ratio, and enables the exploration of sequential compression techniques such as residual coding and adaptive coding (see Section~\ref{sec:experiments}). To help avoid over-fitting (or over-testing) on certain regions of the sky, great care was taken to ensure no two images in the same dataset overlap spatially. We briefly describe the five datasets comprising AstroCompress, presenting the some key features in Fig.\,\ref{fig:corpus}, and defer details of their composition and acquisition to the Supplementary Material:
+
+% In contrast to the conventional approach of communicating each 2D image at a time, we believe the data cube format may unlock substantial new gains in compression efficiency.  
+
+% Significant effort went into curating the 4D data cubes and ensuring spatial consistency across time steps.
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figs/astro-compress-figure-col-name.pdf}
+  \caption{
+  Depiction of salient features in the AstroCompress corpus using representative images from each dataset. Inset to the JWST $t_0$ (first) image are the value changes in time for a small sample of pixels. In SDSS there are 5 filtered images per observation epoch, up to a variable number $n$ observations in the same portion of the sky. 
+  The inset of Hubble zooms in on a spiral galaxy, showing cosmic ray hits (black) and charge transfer inefficiency, causing vertical flux smearing.
+  %The inset of SBI-16-2D is a zoom in on a spiral galaxy, where many pixels are affected by hits from cosmic rays (dark black) as well as charge transger inefficiency, causing smearing of flux in the vertical direction. 
+  The actual pixel values in Keck are shown for a zoomed-in 5$\times$5 pix$^2$ region. %The different gains/biases across amplifiers are seen in all but SDSS.
+  }
+  \label{fig:corpus}
+  \vspace{-1em}
+\end{figure}
+
+% \subsection{Constituent datasets}
+% The AstroCompress corpus is comprised of 5 distinct datasets, curated to capture the range of real and realistic datasets in astronomy. 
+
+
+\paragraph{GBI-16-2D (Keck)}
+This is a diverse, 2D optical imaging dataset from the ground-based W.\,M.\,Keck Observatory. It contains $137$ images of size either $2248\times2048$ or $3768\times2520$ pix$^{2}$, obtained in a variety of observing conditions, filters, and across exposure times from seconds to $>$10\,min.  
+% We hope that strong performance on this dataset will be more indicative of a compression scheme's generalizability.
+%The diverse makeup of this dataset is particularly suitable for developing/evaluating a general-purpose compression algorithm. \TODO{does it matter that it's only ground-based?}
+
+\paragraph{SBI-16-2D (Hubble)}
+This dataset is derived from the  Hubble Space Telescope (HST) Advanced Camera for Surveys (ACS; \citealt{2005PASP..117.1049S}) observations in the F606W ($\sim$red) filter. It contains $4282$ images of size $4144\times2068$ pix$^{2}$. A major challenge (and opportunity for compression) in these raw space-based images are the preponderance of random cosmic ray-affected pixels and charge transfer inefficiencies causing vertical stripping (see Fig.\,\ref{fig:corpus}).
+
+\paragraph{SBI-16-3D (JWST)}
+This dataset comes from the NIRCAM instrument onboard the James Webb Space Telescope (JWST), taken with the F200W (infrared) filter. It contains 1273 3D cubes of $T \times$ 2048 $\times$ 2048, for time steps $T$, typically ranging as $5 \lessapprox T \lessapprox 10$.
+% moving this to the supplement:
+% distributed as \textcolor{red}{$\mu_T = 6.57 \pm \sigma_T = 2.38$. The most frequent values are $T=5$ (191 occurrences), $T=10$ (168 occurrences), and $T=8$ (151 occurrences).} 
+The instrument repeatedly measures the cumulative optimal charge across time, and therefore the pixel value at a given spatial location cube increases with $T$ until reaching a saturation value ($2^{16} - 1)$. This directly allows for residual coding, i.e., compressing an initial 2D frame and the temporal differences of 2D frames subsequently.
+
+\paragraph{GBI-16-4D (SDSS)}
+This ground-based dataset is assembled from the Sloan Digital Sky Survey (SDSS; \citealt{2000AJ....120.1579Y}). We assembled $500$ four-dimensional cube representations of different 800$\times$800 pix$^2$ portions of the sky, each one observed from $t=1$ up to $T \approx 90$ times in $F$=5 filters ({\it u}, {\it g}, {\it r}, {\it i}, {\it z}), each cube having shape $T \times F \times 800 \times 800$.
+% Given the excellent but inherently noisy process of WCS fitting, the $t\times f$ image slices in a given cube are spatially aligned to $<$1 pix. As a result, for a fixed pixel location in a given cube there are high correlations in the pixel value across time and wavelength. While the effective integration time is identical across all image slices, there are slices are of higher signal-to-noise than others in the same cube and all have varying background levels. In the few cases where an image slices does not fully overlap the central region of the anchor field, we fill the missing region with values of zero.
+Compared to JWST, this dataset contains multiple channels associated with different wavelength filters, and presents rich possibilities for modeling and/or compression that takes into account correlation among all four dimensions. 
+
+\paragraph{GBI-16-2D-Legacy}
+This small ground-based dataset obtained on multiple CCDs across many different telescopes is reproduced from the public corpus released by  \citet{maireles2023efficient} and assembled by us in HuggingFace \texttt{dataset} format. Our experiments only made use of the subset of data from the Las Cumbres Observatory (\textbf{LCO}). 
+%\TODO{actually mention/discuss their results ?}
+
+%Raw data collected by astronomical instruments is almost always stored as integer data, often unsigned 16-bit integers. The reason for this is that CCDs work by counting the number of photons that land on the detector. The raw image stored in memory generally contains the number of photons that land in each pixel, times the "gain" of the CCD.
+
+%One pressing need for astronomical data compression is for remote telescopes with harsh bandwidth limitations. Examples include all space telescopes and instruments on the south pole. For example, most space telescopes only get a short time window for data transmission during their orbits, and the noisy channel of space creates additional bandwidth issues. As a result, space telescopes often transmit much less data than they are able to collect.
+
+%Another use case is for ground-based telescopes, and their transmission of raw data to storage facilities, often at universities and national labs. While wired communications allow for much higher bandwidths than those in space, the data volume is also significantly greated on ground telescopes.
+
