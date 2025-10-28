@@ -184,126 +184,52 @@
     
     /* Global spacing improvements for all figures and captions */
     .hero .subtitle, .section .subtitle, .carousel .subtitle {
-      margin-top: 2rem !important;
-      padding-top: 1.5rem !important;
+      margin-top: 0.5rem !important;
+      padding-top: 0.5rem !important;
     }
     
     /* Main teaser image spacing */
     .hero.teaser .subtitle {
-      margin-top: 2.5rem !important;
-      padding-top: 2rem !important;
+      margin-top: 0.5rem !important;
+      padding-top: 0.5rem !important;
     }
     
     /* General image to caption spacing */
     img + .subtitle, img + h2, img + p {
-      margin-top: 2rem !important;
+      margin-top: 0.5rem !important;
     }
     
-    /* AGGRESSIVE CAROUSEL NAVIGATION OVERRIDES */
-    /* Force white background with black triangles using all possible selectors */
-    button[class*="nav"], button[class*="carousel"], button[class*="slider"],
-    .carousel button, .slider button, [role="button"],
-    .carousel-nav-left, .carousel-nav-right, .slider-nav-previous, .slider-nav-next,
-    .carousel .carousel-nav-left, .carousel .carousel-nav-right,
-    .results-carousel button, #results-carousel button {
-      background: white !important;
-      background-color: white !important;
-      border: 2px solid white !important;
-      border-radius: 50% !important;
-      width: 50px !important;
-      height: 50px !important;
-      color: black !important;
-      font-size: 0 !important;
+    /* Simple fade carousel styles */
+    .carousel-images {
+      position: relative;
+      width: 100%;
+      height: 600px; /* Give it a fixed height */
     }
     
-    /* Black triangle arrows using multiple approaches */
-    button[class*="nav"]::before, button[class*="carousel"]::before, button[class*="slider"]::before,
-    .carousel button::before, .slider button::before, [role="button"]::before,
-    .carousel-nav-left::before, .carousel-nav-right::before, .slider-nav-previous::before, .slider-nav-next::before,
-    .carousel .carousel-nav-left::before, .carousel .carousel-nav-right::before,
-    .results-carousel button::before, #results-carousel button::before {
-      content: "" !important;
-      border: solid black !important;
-      border-color: black !important;
-      border-width: 0 5px 5px 0 !important;
-      display: inline-block !important;
-      padding: 6px !important;
-      position: absolute !important;
-      top: 50% !important;
-      left: 50% !important;
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
-    /* Left arrows */
-    button[class*="prev"]::before, button[class*="left"]::before,
-    .carousel-nav-left::before, .slider-nav-previous::before {
-      transform: translate(-50%, -50%) rotate(135deg) !important;
+    .carousel-slide.active {
+      opacity: 1;
     }
     
-    /* Right arrows */
-    button[class*="next"]::before, button[class*="right"]::before,
-    .carousel-nav-right::before, .slider-nav-next::before {
-      transform: translate(-50%, -50%) rotate(-45deg) !important;
+    .carousel-btn:hover {
+      background: rgba(255,255,255,1) !important;
     }
     
-    /* Force remove any existing content */
-    button[class*="nav"], button[class*="carousel"], button[class*="slider"] {
-      text-indent: -9999px !important;
-      overflow: hidden !important;
-      position: relative !important;
-    }
-    
-    .carousel .carousel-container .carousel-item {
-      margin-bottom: 2rem !important;
-    }
-    
-    /* AGGRESSIVE STAR NAVIGATION INDICATORS */
-    /* Force all pagination dots to be white stars */
-    .carousel ol li, .slider ol li, .carousel .carousel-navigation li,
-    .carousel-nav-item, .slider-nav-item, .carousel ol li button, .slider ol li button,
-    .carousel .carousel-navigation .carousel-nav-item, .slider-navigation .slider-nav-item,
-    .results-carousel ol li, #results-carousel ol li {
-      background: transparent !important;
-      border: none !important;
-      width: 25px !important;
-      height: 25px !important;
-      margin: 0 8px !important;
-      position: relative !important;
-      font-size: 0 !important;
-      text-indent: -9999px !important;
-    }
-    
-    /* White star content */
-    .carousel ol li::after, .slider ol li::after, .carousel .carousel-navigation li::after,
-    .carousel-nav-item::after, .slider-nav-item::after, .carousel ol li button::after, .slider ol li button::after,
-    .carousel .carousel-navigation .carousel-nav-item::after, .slider-navigation .slider-nav-item::after,
-    .results-carousel ol li::after, #results-carousel ol li::after {
-      content: "★" !important;
-      color: rgba(255, 255, 255, 0.6) !important;
-      font-size: 22px !important;
-      position: absolute !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      transition: all 0.3s ease !important;
-      z-index: 10 !important;
-    }
-    
-    /* Active/hover state for stars */
-    .carousel ol li.is-active::after, .slider ol li.is-active::after, 
-    .carousel ol li:hover::after, .slider ol li:hover::after,
-    .carousel .carousel-navigation li.is-active::after, .carousel .carousel-navigation li:hover::after,
-    .carousel-nav-item.is-active::after, .carousel-nav-item:hover::after,
-    .slider-nav-item.is-active::after, .slider-nav-item:hover::after,
-    .results-carousel ol li.is-active::after, #results-carousel ol li.is-active::after,
-    .results-carousel ol li:hover::after, #results-carousel ol li:hover::after {
-      color: white !important;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9) !important;
-      transform: translate(-50%, -50%) scale(1.4) !important;
-    }
-    
-    /* Remove any existing dots/circles */
-    .carousel ol li, .slider ol li, .results-carousel ol li {
-      border-radius: 0 !important;
+    .dot:hover {
+      opacity: 0.7 !important;
     }
   </style>
 
@@ -313,6 +239,54 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <script>
+    // Simple fade carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      
+      function updateCarousel() {
+        // Remove active class from all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Add active class to current slide
+        slides[currentSlide].classList.add('active');
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+          dot.style.opacity = index === currentSlide ? '0.7' : '0.3';
+        });
+      }
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      }
+      
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+      
+      // Event listeners
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentSlide = index;
+          updateCarousel();
+        });
+      });
+      
+      // Auto-advance every 5 seconds
+      setInterval(nextSlide, 5000);
+    });
+  </script>
 </head>
 <body>
 
@@ -324,39 +298,91 @@
           <div class="column has-text-centered">
             <h1 class="title publication-title" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 1rem;">AstroCompress:</h1>
             <h2 class="title is-2 publication-subtitle" style="font-size: 2rem; font-weight: 400; color: #D1D5DB;">A Benchmark Dataset for Multi-Purpose Compression of Astronomical Imagery</h2>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="#" target="_blank">Tuan Truong</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="#" target="_blank">Rithwik Sudharsan</a><sup>*</sup>
-                  </span>
-                  <br>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Yibo Yang</a>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Peter Xiangyuan Ma</a>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Ruihan Yang</a>
-                  </span>
-                  <br>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Stephan Mandt</a>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Joshua S. Bloom</a>
-                  </span>
+            <div class="publication-authors">
+              <!-- Paper authors in columns -->
+              <div class="columns is-mobile is-centered is-gapless author-columns" style="margin-bottom: 0.5rem;">
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://www.linkedin.com/in/tuatruong/" target="_blank" style="font-size: 1.1rem;">Tuan Truong</a><sup>*</sup>
                   </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">UC Irvine, UC Berkeley, LBNL<br>ICLR 2025</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Irvine
                   </div>
+                </div>
+                
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://www.linkedin.com/in/rithwik-sudharsan/" target="_blank" style="font-size: 1.1rem;">Rithwik Sudharsan</a><sup>*</sup>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Berkeley
+                  </div>
+                </div>
+              </div>
+              
+              <div class="columns is-mobile is-centered is-gapless author-columns" style="margin-bottom: 0.5rem;">
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://yiboyang.com/about/" target="_blank" style="font-size: 1.1rem;">Yibo Yang</a>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Irvine
+                  </div>
+                </div>
+                
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://peterma.ca/index.html" target="_blank" style="font-size: 1.1rem;">Peter Xiangyuan Ma</a>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Berkeley
+                  </div>
+                </div>
+                
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://buggyyang.github.io/" target="_blank" style="font-size: 1.1rem;">Ruihan Yang</a>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Berkeley
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="columns is-mobile is-centered is-gapless author-columns" style="margin-bottom: 0.5rem;">
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://www.stephanmandt.com/" target="_blank" style="font-size: 1.1rem;">Stephan Mandt</a>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Irvine
+                  </div>
+                </div>
+                
+                <div class="column is-narrow has-text-centered author-item" style="margin: 0 1.5rem;">
+                  <div class="author-name">
+                    <a href="https://joshbloom.org/" target="_blank" style="font-size: 1.1rem;">Joshua S. Bloom</a>
+                  </div>
+                  <div class="author-affiliation" style="font-size: 0.9rem; margin-top: 0.25rem; color: #9CA3AF;">
+                    UC Berkeley, LBNL
+                  </div>
+                </div>
+              </div>
+              
+              <div class="has-text-centered" style="margin-top: 0.5rem;">
+                <div style="font-size: 1rem; margin-bottom: 0.5rem; color: #D1D5DB;"><b>ICLR 2025</b></div>
+                <div class="eql-cntrb" style="font-size: 0.85rem; color: #9CA3AF;">
+                  <sup>*</sup>Equal contribution first authors.
+                </div>
+              </div>
+            </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Paper PDF link -->
                       <span class="link-block">
-                        <a href="AstroCompress_latest.pdf" target="_blank"
+                        <a href="https://openreview.net/pdf?id=kQCHCkNk7s" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -387,16 +413,38 @@
                   </a>
                 </span>
 
-                <!-- ICLR 2025 Link -->
+                <!-- Notebook link -->
                 <span class="link-block">
-                  <a href="#" target="_blank"
+                  <a href="https://colab.research.google.com/drive/1SuFBPZiYZg9LH4pqypc_v8Sp99lShJqZ?usp=sharing" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="fas fa-trophy"></i>
+                    <i class="fas fa-book"></i>
                   </span>
-                  <span>ICLR 2025</span>
+                  <span>Notebook</span>
                 </a>
               </span>
+
+                <!-- ICLR 2025 Link -->
+                <span class="link-block">
+                  <a href="https://openreview.net/forum?id=kQCHCkNk7s&nesting=2&sort=date-desc" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                  <span>OpenReview</span>
+                </a>
+              </span>
+
+              <!-- ICLR Poster Link -->
+              <span class="link-block">
+                <a href="https://iclr.cc/virtual/2025/poster/28585" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                </span>
+                <span>ICLR 2025 Video Presentation</span>
+              </a>
+            </span>
             </div>
           </div>
         </div>
@@ -407,15 +455,15 @@
 
 
 <!-- Teaser overview -->
-<section class="hero teaser" style="padding-top: 1.5rem;">
+<section class="hero teaser" style="padding-top: 0.1rem;">
   <div class="container is-max-desktop">
-    <div class="hero-body" style="padding-top: 1rem;">
+    <div class="hero-body" style="padding-top: 0.5rem;">
       <div class="has-text-centered">
         <img src="static/images/astro-compress-figure-col.png" alt="AstroCompress Dataset Overview" style="max-height: 600px; max-width: 100%; object-fit: contain;"/>
       </div>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 0.5rem;">
         AstroCompress provides large-scale astronomical imaging datasets spanning space-based and ground-based telescopes, 
-        enabling neural compression research for the unique challenges of astronomical data transmission and storage.
+        enabling scientifically-informed ML for astronomy research. We focus on neural compression for improved data transmission and storage.
       </h2>
     </div>
   </div>
@@ -423,20 +471,20 @@
 <!-- End teaser overview -->
 
 <!-- Paper abstract -->
-<section class="section hero is-light" style="padding-top: 3rem;">
+<section class="section hero is-light" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-left">
           <p>
-            The site conditions that make astronomical observatories in space and on the ground so desirable—cold and dark—demand a physical remoteness that leads to limited data transmission capabilities. Such transmission limitations directly bottleneck the amount of data acquired and in an era of costly modern observatories, any improvements in lossless data compression has the potential scale to billions of dollars worth of additional science that can be accomplished on the same instrument.
+            Astronomical observatories are physically remote, leading to data transmission limits that severely bottleneck throughput. Often, observatories can collect much more data than they can downlink. Any improvements in lossless compression can unlock billions of dollars worth of additional science by enabling more observations and thus unleashing the potential of existing instruments.
           </p>
           <p>
-            Traditional lossless methods for compressing astrophysical data are manually designed. Neural data compression, on the other hand, holds the promise of learning compression algorithms end-to-end from data and outperforming classical techniques by leveraging the unique spatial, temporal, and wavelength structures of astronomical images.
+            Traditional lossless methods for compressing astrophysical data are manually designed. Neural data compression can learn end-to-end from data and outperform classical techniques by leveraging the unique spatial, temporal, and wavelength structures of astronomical images.
           </p>
           <p>
-            This paper introduces <strong>AstroCompress</strong>: a neural compression challenge for astrophysics data, featuring four new datasets (and one legacy dataset) with 16-bit unsigned integer imaging data in various modes: space-based, ground-based, multi-wavelength, and time-series imaging. We provide code to easily access the data and benchmark seven lossless compression methods (three neural and four non-neural, including all practical state-of-the-art algorithms). Our results on lossless compression indicate that lossless neural compression techniques can enhance data collection at observatories, and provide guidance on the adoption of neural compression in scientific applications.
+            This paper introduces <strong>AstroCompress</strong>: a neural compression challenge for astrophysics data, featuring four new datasets with raw, 16-bit unsigned integer imaging data in various modes: space-based, ground-based, multi-wavelength, and time-series imaging. We benchmark seven lossless compression methods and show that neural methods can enhance data collection.
           </p>
         </div>
       </div>
@@ -445,22 +493,45 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Webb Orbit Image -->
+<section class="section hero is-light" style="padding-top: 1rem;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Webb's Orbit at L2</h2>
+        <div class="content">
+          <a href="https://science.nasa.gov/mission/webb/orbit/" target="_blank">
+            <img src="webb_orbit.png" alt="James Webb Space Telescope orbit at L2 Lagrange point" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Webb Orbit Image -->
+
 <!-- The Challenge Section -->
-<section class="hero is-small" style="padding-top: 3rem;">
+<section class="hero is-small" style="padding-top: 1rem;">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">The Challenge: An Explosion of Astronomical Data</h2>
-          <div class="content has-text-justified">
+          <div class="content has-text-left">
             <p>
               Astronomy data volumes are growing at a <strong>superexponential rate</strong>, increasing by a factor of nearly <strong>1000x every 10 years</strong>. This rapid growth places an immense burden on our ability to transmit and store data, threatening to stall scientific progress. The development of exascale supercomputers is a direct response to this data deluge.
             </p>
             <p>
-              Advanced compression is not just a convenience—it's a <strong>critical necessity</strong> to ensure we can continue to collect and analyze the vast amounts of data from radio astronomy, satellite imagery, and other large-scale scientific endeavors. The Nancy Grace Roman Space Telescope, launching in 2027, faces "unprecedented" data scale challenges that could result in permanent data loss if transmission bottlenecks aren't solved.
+              Advanced compression is not just a convenience—it's a <strong>critical necessity</strong> to ensure we can continue to collect and analyze the vast amounts of data from radio astronomy, satellite imagery, and other large-scale scientific endeavors. Unlike internet media, where better compression implies faster load times for a user, telescope data compression leads to more data collected overall. The Nancy Grace Roman Space Telescope, launching in 2027, faces "unprecedented" data scale challenges that could result in permanent data loss if transmission bottlenecks aren't solved.
             </p>
             <p>
-              With Roman's estimated cost of <strong>$4.3 billion</strong>, even a mere <strong>1% improvement in lossless compression translates to $43 million worth of additional scientific data</strong> that can be preserved and transmitted to Earth. While lossless methods are safe, carefully designed neural compression may unlock orders-of-magnitude improvements in data handling pipelines.
+              With Roman's estimated cost of <strong>$4.3 billion</strong>, even a mere <strong>1% improvement in lossless compression translates to a back-of-the-envelope $43 million worth of additional scientific data</strong> that can be preserved and transmitted to Earth. Carefully designed neural compression may unlock orders-of-magnitude improvements in data handling pipelines.
+            </p>
+            <p>
+              Beyond individual missions, the broader astronomical community will soon generate <strong>exabytes of data annually</strong>. The Square Kilometer Array alone will produce 62 exabytes per year starting in the late 2020s. The infrastructure costs for storing, transmitting, and processing this data represent a substantial portion of total project budgets, where compression improvements have compound economic benefits across the entire data pipeline.
+            </p>
+            <p>
+              Our neural compression methods demonstrate that <strong>domain-specific optimization</strong> can achieve up to 20% better compression ratios than general-purpose algorithms. For space-based telescopes where every bit of downlink bandwidth is precious, these improvements have the potential to dramatically increase scientific output and discovery potential—transforming what would otherwise be lost data into preserved science.
             </p>
           </div>
         </div>
@@ -471,21 +542,22 @@
 <!-- End challenge section -->
 
 <!-- The Solution Section -->
-<section class="section hero is-light">
+<section class="section hero is-light" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Our Solution: Neural Compression for Space</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-left">
           <p>
             Unlike traditional hand-crafted compression algorithms, <strong>neural compression learns directly from astronomical data</strong>, automatically discovering the unique patterns and structures present in space-based and ground-based imagery. By leveraging the spatial correlations of celestial objects, temporal dependencies in time-series observations, and spectral relationships across wavelengths, neural methods can achieve superior compression ratios.
           </p>
           <p>
-            Our research demonstrates that neural compression methods can <strong>match or exceed classical state-of-the-art algorithms</strong> like JPEG-XL while learning end-to-end from the data itself. This opens the door for compression algorithms specifically optimized for the unique characteristics of astronomical imagery—something impossible with manually designed methods.
+            Our research demonstrates that neural compression methods can <strong>match or exceed classical state-of-the-art algorithms</strong> like JPEG-XL while learning end-to-end from the data itself. This opens the door for compression algorithms specifically optimized for the unique characteristics of astronomical imagery.
           </p>
           <p>
             The AstroCompress benchmark provides the astronomical community with <strong>320 GB of carefully curated datasets</strong> spanning the full diversity of modern astronomical observations, from Hubble's cosmic ray-affected images to JWST's infrared time-series and SDSS's multi-wavelength surveys.
           </p>
+          
         </div>
       </div>
     </div>
@@ -493,8 +565,10 @@
 </section>
 <!-- End solution section -->
 
+ 
+
 <!-- Technical Dataset Overview -->
-<section class="hero is-small">
+<section class="hero is-small" style="padding-top: 1rem;">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">AstroCompress Dataset Specifications</h2>
@@ -536,7 +610,7 @@
                 <td>F606W (V-band)</td>
                 <td>0.05</td>
                 <td>4144×2068</td>
-                <td>4282</td>
+                <td>2140</td>
                 <td>69</td>
                 <td>Cosmic ray hits, charge transfer inefficiency</td>
               </tr>
@@ -579,7 +653,7 @@
             </tbody>
           </table>
         </div>
-        <div class="has-text-centered" style="margin-top: 1.5rem;">
+        <div class="has-text-centered" style="margin-top: 0.5rem;">
           <p><strong>Total Dataset:</strong> ~320 GB across 6,201 arrays | <strong>Bit Depth:</strong> 16-bit unsigned integer | <strong>Access:</strong> <a href="https://huggingface.co/AstroCompress" target="_blank">HuggingFace Datasets</a></p>
         </div>
       </div>
@@ -589,46 +663,13 @@
 <!-- End technical dataset overview -->
 
 
-<!-- Datasets and Results carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">AstroCompress Datasets & Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Compression Results -->
-        <img src="static/images/combined_images_with_aligned_colorbar.png" alt="SNR and Bitrate Analysis" style="max-height: 500px; max-width: 100%; object-fit: contain; margin: 0 auto; display: block;"/>
-        <h2 class="subtitle has-text-centered">
-          <strong>Noise Analysis:</strong> Signal-to-noise ratio (SNR) and compression bitrate allocation analysis showing how background noise dominates compression requirements in astronomical images.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Exposure Time vs Compression -->
-        <img src="static/images/hubble_exposure_time.png" alt="Exposure Time vs Compression Performance" style="max-height: 500px; max-width: 100%; object-fit: contain; margin: 0 auto; display: block;"/>
-        <h2 class="subtitle has-text-centered">
-         <strong>Compression vs Exposure:</strong> Relationship between Hubble telescope exposure times and compression performance, showing how longer exposures reduce compressibility due to increased noise.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Background Noise Correlation -->
-      <img src="static/images/bkg_vs_jpg.png" alt="Background Noise vs Compressibility" style="max-height: 500px; max-width: 100%; object-fit: contain; margin: 0 auto; display: block;"/>
-      <h2 class="subtitle has-text-centered">
-        <strong>Noise Impact:</strong> Strong correlation between background pixel noise levels and compression performance across different astronomical datasets.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End datasets and results carousel -->
-
 <!-- Comprehensive Compression Results -->
-<section class="section hero is-light">
+<section class="section hero is-light" style="padding-top: 1rem;">
   <div class="container">
     <h2 class="title is-3 has-text-centered">Comprehensive Compression Results</h2>
     <div class="content">
-      <p class="has-text-centered" style="margin-bottom: 2rem;">
-        <strong>Compression Ratios Achieved:</strong> Higher values indicate better compression. Neural methods consistently match or exceed classical algorithms across diverse astronomical datasets.
+      <p class="has-text-centered" style="margin-bottom: 1rem;">
+        <strong>Compression Ratios Achieved:</strong> Higher values indicate better compression.
       </p>
       
       <div class="table-container">
@@ -653,8 +694,8 @@
           </thead>
           <tbody>
             <!-- Single-frame datasets -->
-            <tr class="has-background-grey-lighter">
-              <td colspan="10" style="text-align: center; color: #1F2937 !important;"><strong>Single-Frame Datasets</strong></td>
+            <tr>
+              <td colspan="10" style="text-align: center; color: #000000 !important; background-color: #f5f5f5 !important;"><strong style="color: #000000 !important;">Single-Frame Datasets</strong></td>
             </tr>
             <tr>
               <td><strong>LCO (Ground)</strong></td>
@@ -670,9 +711,9 @@
             </tr>
             <tr>
               <td><strong>Keck (Ground)</strong></td>
-              <td style="background-color: #10B981; color: white; font-weight: bold;">2.04</td>
+              <td>2.04</td>
               <td>1.89</td>
-              <td>2.08</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">2.08</td>
               <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">2.11</td>
               <td>2.01</td>
               <td>1.97</td>
@@ -694,11 +735,11 @@
             </tr>
             <tr>
               <td><strong>JWST-2D (Space)</strong></td>
-              <td>1.44</td>
-              <td style="background-color: #10B981; color: white; font-weight: bold;">1.38</td>
-              <td>1.44</td>
               <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">1.44</td>
-              <td>1.38</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">1.38</td>
+              <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">1.44</td>
+              <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">1.44</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">1.38</td>
               <td>1.33</td>
               <td>1.35</td>
               <td>1.37</td>
@@ -709,8 +750,8 @@
               <td>2.91</td>
               <td>2.36</td>
               <td style="background-color: #10B981; color: white; font-weight: bold;">3.35</td>
-              <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">3.27</td>
-              <td>3.38</td>
+              <td>3.27</td>
+              <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">3.38</td>
               <td>3.14</td>
               <td>3.16</td>
               <td>3.20</td>
@@ -718,8 +759,8 @@
             </tr>
             
             <!-- Multi-frame datasets -->
-            <tr class="has-background-grey-lighter">
-              <td colspan="10" style="text-align: center; color: #1F2937 !important;"><strong>Multi-Frame/Multi-Spectral Datasets</strong></td>
+            <tr>
+              <td colspan="10" style="text-align: center; color: #000000 !important; background-color: #f5f5f5 !important;"><strong style="color: #000000 !important;">Multi-Frame/Multi-Spectral Datasets</strong></td>
             </tr>
             <tr>
               <td><strong>JWST-2D-Res</strong></td>
@@ -727,10 +768,10 @@
               <td>2.91</td>
               <td>2.80</td>
               <td>—</td>
-              <td>3.35</td>
+              <td style="background-color: #065F46; color: #ffffff; font-weight: bold;">3.35</td>
               <td>2.37</td>
-              <td>3.24</td>
-              <td style="background-color: #10B981; color: white; font-weight: bold;">1.69</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">3.24</td>
+              <td>1.69</td>
               <td>3.08</td>
             </tr>
             <tr>
@@ -739,10 +780,10 @@
               <td>2.29</td>
               <td>2.88</td>
               <td>—</td>
-              <td style="background-color: #10B981; color: white; font-weight: bold;">3.49</td>
+              <td style="background-color: #065F46; color: white; font-weight: bold;">3.49</td>
               <td>3.23</td>
               <td>3.24</td>
-              <td>3.28</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">3.28</td>
               <td>3.05</td>
             </tr>
             <tr>
@@ -751,17 +792,17 @@
               <td>2.59</td>
               <td>3.02</td>
               <td>—</td>
-              <td style="background-color: #10B981; color: white; font-weight: bold;">3.48</td>
+              <td style="background-color: #065F46; color: white; font-weight: bold;">3.48</td>
               <td>3.23</td>
               <td>3.24</td>
-              <td>3.29</td>
+              <td style="background-color: #10B981; color: white; font-weight: bold;">3.29</td>
               <td>3.05</td>
             </tr>
           </tbody>
         </table>
       </div>
       
-      <div class="columns is-multiline" style="margin-top: 2rem;">
+      <div class="columns is-multiline" style="margin-top: 1rem;">
         <div class="column is-half">
           <div class="box" style="background-color: #1F2937; border: 1px solid #4B5563;">
             <h4 class="title is-5" style="color: #10B981;">🏆 Key Findings</h4>
@@ -777,7 +818,7 @@
             <h4 class="title is-5" style="color: #06B6D4;">📊 Performance Notes</h4>
             <ul style="color: #E5E7EB;">
               <li><strong>*VDM:</strong> Theoretical upper bound estimates (impractical runtime)</li>
-              <li><strong>Green highlights:</strong> Best practical performance per dataset</li>
+              <li><strong>Green highlights:</strong> Best performance per dataset</li>
               <li><strong>Multi-frame:</strong> Higher ratios exploit temporal/spectral correlations</li>
             </ul>
           </div>
@@ -788,22 +829,67 @@
 </section>
 <!-- End compression results section -->
 
-<!-- Detailed Scientific Analysis -->
-<section class="hero is-small">
+<!-- Datasets and Results carousel -->
+<section class="hero is-small" style="padding-top: 1rem;">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Scientific Analysis: What Makes Astronomical Images Compressible?</h2>
       
-      <div class="columns is-desktop">
+      <!-- Simple Image Carousel -->
+      <div class="carousel-container" style="position: relative; max-width: 800px; margin: 0 auto;">
+        <div class="carousel-images" style="overflow: hidden; border-radius: 8px;">
+          <div class="carousel-slide active">
+            <img src="static/images/combined_images_with_aligned_colorbar.png" alt="SNR and Bitrate Analysis" style="max-height: 500px; max-width: 100%; object-fit: contain;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+              <strong>Noise Analysis:</strong> Signal-to-noise ratio (SNR) and compression bitrate allocation analysis showing how background noise dominates compression requirements in astronomical images.
+            </h2>
+          </div>
+          <div class="carousel-slide">
+            <img src="static/images/hubble_exposure_time.png" alt="Exposure Time vs Compression Performance" style="max-height: 500px; max-width: 100%; object-fit: contain;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+              <strong>Compression vs Exposure:</strong> Relationship between Hubble telescope exposure times and compression performance, showing how longer exposures reduce compressibility due to increased noise.
+            </h2>
+          </div>
+          <div class="carousel-slide">
+            <img src="static/images/bkg_vs_jpg.png" alt="Background Noise vs Compressibility" style="max-height: 500px; max-width: 100%; object-fit: contain;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+              <strong>Noise Impact:</strong> Strong correlation between background pixel noise levels and compression performance across different astronomical datasets.
+            </h2>
+          </div>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <button class="carousel-btn prev" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; color: #333;">‹</button>
+        <button class="carousel-btn next" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; color: #333;">›</button>
+        
+        <!-- Dots -->
+        <div class="carousel-dots" style="text-align: center; margin-top: 1rem;">
+          <span class="dot active" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: white; margin: 0 5px; cursor: pointer; opacity: 0.7;"></span>
+          <span class="dot" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: white; margin: 0 5px; cursor: pointer; opacity: 0.3;"></span>
+          <span class="dot" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: white; margin: 0 5px; cursor: pointer; opacity: 0.3;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End datasets and results carousel -->
+
+<!-- Detailed Scientific Analysis -->
+<section class="hero is-small" style="padding-top: 0rem;">
+  <div class="hero-body">
+    <div class="container">
+     
+      
+      <div class="columns is-centered">
         <div class="column is-two-thirds">
           <div class="content">
             <h3 class="title is-4">Background Noise Dominates Compression Requirements</h3>
             <p>
-              Our analysis reveals a fundamental insight about astronomical image compression: <strong>98.5% of pixels in typical astronomical images fall below 3 SNR</strong>, meaning they are dominated by background noise rather than actual astronomical sources. This finding has profound implications for compression algorithm design.
+              Our analysis confirms a fundamental insight about astronomical image compression, first explained by <a href="https://arxiv.org/abs/0903.2140" target="_blank">Pence et al. (2009)</a>: <strong>98.5% of pixels in typical astronomical images fall below 3 SNR</strong>, meaning they are dominated by background noise rather than actual astronomical sources. This finding has important implications for compression algorithm design.
             </p>
             
             <p>
-              We demonstrate a strong linear correlation (R² > 0.9) between background pixel noise levels and compression bitrate requirements across all datasets. Images with higher background noise standard deviation require proportionally more bits per pixel, following the theoretical prediction from Shannon's source coding theorem.
+              We demonstrate a strong linear correlation between background pixel noise levels and compression bitrate requirements across all datasets. Images with higher background noise standard deviation require proportionally more bits per pixel, following the theoretical prediction from Shannon's source coding theorem.
             </p>
             
             <h3 class="title is-4">Exposure Time vs. Compression Performance</h3>
@@ -818,113 +904,64 @@
           </div>
         </div>
         
-        <div class="column is-one-third">
-          <div class="box" style="background-color: #374151;">
-            <h4 class="title is-5" style="color: #06B6D4;">Compression Breakthroughs</h4>
-            <div class="content">
-              <p><strong>Neural Methods Excel At:</strong></p>
-              <ul>
-                <li>Modeling complex noise patterns in astronomical backgrounds</li>
-                <li>Exploiting spatial correlations around celestial sources</li>
-                <li>Learning domain-specific redundancies automatically</li>
-              </ul>
-              
-              <p><strong>JPEG-XL Advantages:</strong></p>
-              <ul>
-                <li>Superior performance on high-dynamic-range data</li>
-                <li>Efficient handling of sparse astronomical sources</li>
-                <li>Practical deployment readiness</li>
-              </ul>
-              
-              <p><strong>Future Potential:</strong></p>
-              <ul>
-                <li>VDM estimates suggest 15-30% improvement possible</li>
-                <li>Multi-temporal compression shows 40%+ gains</li>
-                <li>Lossy methods could achieve 10x+ compression</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
 </section>
 <!-- End scientific analysis section -->
 
-<!-- Impact and Economic Value -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Economic Impact: Billions in Additional Science</h2>
-        <div class="content has-text-justified">
-          <p>
-            The Nancy Grace Roman Space Telescope, launching in 2027 with an estimated cost of <strong>$4.3 billion</strong>, faces "unprecedented" data transmission challenges. Our compression improvements have direct economic impact: a mere <strong>1% improvement in lossless compression translates to $43 million worth of additional scientific data</strong> that can be preserved and transmitted to Earth.
-          </p>
-          <p>
-            Beyond individual missions, the broader astronomical community generates <strong>exabytes of data annually</strong>. The Square Kilometer Array alone will produce 62 exabytes per year starting in the late 2020s. Even modest improvements in compression efficiency can save hundreds of millions of dollars in storage and transmission infrastructure costs.
-          </p>
-          <p>
-            Our neural compression methods demonstrate that <strong>domain-specific optimization</strong> can achieve 15-25% better compression ratios than general-purpose algorithms. For space-based telescopes where every bit of downlink bandwidth is precious, these improvements directly translate to increased scientific output and discovery potential.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End impact section -->
+<!-- Future Directions Section -->
+<section class="section hero is-light" style="padding-top: 1rem;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-12 has-text-centered" style="margin-bottom: 0.5rem;">
+        <h2 class="title is-3">Future Directions</h2>
+        <div class="content has-text-left" style="margin: 0 auto; max-width: 1100px;">
+          
+          <div class="columns is-multiline is-centered" style="margin-top: 0.5rem;">
+            <!-- Row 1: Lossy + Other/Deployment -->
+            <div class="column is-half">
+              <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem;">〰️ Lossy Compression for Astronomy</h3>
+              <p>
+                Though lossless compression is the gold standard, lossy and near-lossless compression can achieve significantly higher compression ratios. For astronomy, where most pixels are dominated by noise, lossy compression is particularly promising. Collaborations between astronomers and machine learning experts could lead to advanced lossy compression algorithms that selectively discard non-essential data while preserving scientifically valuable information.
+              </p>
+              <p>
+                One approach might mask astronomical sources and prioritize the accuracy of source pixels. Another approach could involve <strong>near-lossless compression</strong>, which ensures a strict user-defined upper bound on the error of every individual reconstructed pixel. Such an approach would be attractive to astronomers, who may desire a robust error measurement for uncertainty propagation.
+              </p>
+            </div>
+            <div class="column is-half">
+              <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem;">📡 Other Data Types</h3>
+              <p>
+                Other domains in astrophysics are in need of compression benchmarks, especially such as radio astronomy (i.e. Square Kilometer Array) and neutrino detectors (i.e. IceCube). Even beyond astronomy, domains like biological imaging, genome sequencing, and satellite data all have the fundamental bandwidth limitations that make compression a critical bottleneck.
+              </p>
+              <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">🚀 Practical Deployment</h3>
+              <p>
+                The next critical step is actually deploying new compression algorithms to observatories. Today, only the older RICE compression method is primarily in use.
+              </p>
+            </div>
 
-
-
-
-<!-- Why Neural Compression for Astronomy -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Why Neural Compression is Perfect for Astronomy</h2>
-          <div class="content has-text-justified">
-            <p>
-              Astronomical images have <strong>unique statistical properties</strong> that make them ideal candidates for neural compression. Unlike natural images, they contain vast regions of low signal-to-noise background punctuated by high-intensity celestial sources. They exhibit strong spatial correlations within objects, temporal dependencies across observations, and spectral relationships between wavelengths.
-            </p>
-            <p>
-              Traditional compression methods like RICE, JPEG-LS, and JPEG-2000 were designed for general-purpose data and cannot exploit these domain-specific patterns. Neural compression, however, can <strong>automatically learn and exploit these astronomical structures</strong>, leading to superior compression performance while preserving scientific fidelity.
-            </p>
-            <p>
-              Most importantly, astronomical data analysis happens on powerful supercomputers over days or weeks, so <strong>slow decoding isn't a problem</strong>—unlike consumer applications where fast playback is critical. This asymmetry heavily favors neural methods that can achieve maximum compression at the expense of decoding time.
-            </p>
+            <!-- Row 2: Encoding + Temporal -->
+            <div class="column is-half">
+              <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem;">⚡ Encoding-Decoding Time Tradeoffs</h3>
+              <p>
+                Astronomy prioritizes compression performance, followed by manageable encoding times. Slow decoding on the ground is a non-issue. Traditional compression methods instead optimize for fast decoding on consumer devices, so future work should explore trading decoding speed for higher compression ratios. This asymmetry favors autoregressive methods that can yield higher compression ratios but slow sequential decoding, with Transformer models being potential candidates.
+              </p>
+            </div>
+            <div class="column is-half">
+              <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem;">📊 Temporal Image Compression</h3>
+              <p>
+                Time-series imaging has the potential for better compression ratios by exploiting correlations across time. We achieved extremely high compression ratios on the JWST-2D-Res dataset, as the frames were collected back-to-back in time. We encourage more exploration of dataset construction and compression for back-to-back time-series imagery. Such compression will be critical for the operation of next-generation wide-field time-domain surveys from space. We believe that spectral image compression or temporal images taken far apart in time, such as our SDSS dataset, may be difficult due to noise causing weaker correlation across the less significant bits.
+              </p>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End why neural compression section -->
-
-
-
-
-
-
-
-
-<!-- Paper PDF -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title has-text-centered">Full Paper</h2>
-
-      <iframe src="AstroCompress_latest.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper PDF -->
-
-
-<!--BibTex citation -->
+<!-- End future directions section -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
