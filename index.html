@@ -471,7 +471,7 @@
 <!-- End teaser overview -->
 
 <!-- Paper abstract -->
-<section class="section hero is-light" style="padding-top: 1rem;">
+<section class="section hero is-light" style="padding-top: 1rem;"><!-- Light -->
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -494,7 +494,7 @@
 <!-- End paper abstract -->
 
 <!-- Webb Orbit Image -->
-<section class="section hero is-light" style="margin-top: -4rem;">
+<section class="section hero is-light" style="margin-top: -4rem;"><!-- Light -->
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -503,6 +503,7 @@
           <a href="https://science.nasa.gov/mission/webb/orbit/" target="_blank">
             <img src="static/images/webb_orbit.png" alt="James Webb Space Telescope orbit at L2 Lagrange point" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
           </a>
+          <a href="https://science.nasa.gov/mission/webb/orbit/" target="_blank">[NASA]</a>
         </div>
       </div>
     </div>
@@ -511,7 +512,7 @@
 <!-- End Webb Orbit Image -->
 
 <!-- The Challenge Section -->
-<section class="hero is-small" style="padding-top: 1rem;">
+<section class="hero is-small" style="padding-top: 1rem;"><!-- Dark -->
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -521,17 +522,16 @@
             <p>
               Astronomy data volumes are growing at a <strong>superexponential rate</strong>, increasing by a factor of nearly <strong>1000x every 10 years</strong>. This rapid growth places an immense burden on our ability to transmit and store data, threatening to stall scientific progress. The development of exascale supercomputers is a direct response to this data deluge.
             </p>
+            <h3 class="title is-5" style="color: #06B6D4; margin-top: 1.5rem; margin-bottom: 0.75rem;">Space Telescopes</h3>
             <p>
-              Advanced compression is not just a convenience—it's a <strong>critical necessity</strong> to ensure we can continue to collect and analyze the vast amounts of data from radio astronomy, satellite imagery, and other large-scale scientific endeavors. Unlike internet media, where better compression implies faster load times for a user, telescope data compression leads to more data collected overall. The Nancy Grace Roman Space Telescope, launching in 2027, faces "unprecedented" data scale challenges that could result in permanent data loss if transmission bottlenecks aren't solved. <b>"The rate of data generation significantly exceeds Roman’s very large download capability (1.4 TB/day) even after on board compression; therefore downloading all individual readouts is currently not feasible." <a href="https://www.stsci.edu/files/live/sites/www/files/home/roman/_documents/Roman-STScI-000394_DeterminingTheBestFittingSlope.pdf" target="_blank">[StSci]</a></b>
+              Advanced compression is not just a convenience—it's a <strong>critical necessity</strong> to ensure we can continue to collect and analyze the vast amounts of data from radio astronomy, satellite imagery, and other large-scale scientific endeavors. Unlike internet media, where better compression implies faster load times for a user, telescope data compression leads to more data collected overall. The Nancy Grace Roman Space Telescope, launching soon in 2027, faces "unprecedented" data scale challenges that could result in permanent data loss if transmission bottlenecks aren't solved. <b>"The rate of data generation significantly exceeds Roman's very large download capability (1.4 TB/day) even after on board compression; therefore downloading all individual readouts is currently not feasible." <a href="https://www.stsci.edu/files/live/sites/www/files/home/roman/_documents/Roman-STScI-000394_DeterminingTheBestFittingSlope.pdf" target="_blank">[StSci]</a></b> For future space-based telescopes where every bit of downlink bandwidth is precious, compression improvements have the potential to dramatically increase scientific output and discovery potential—transforming what would otherwise be lost data into preserved science.
+            </p>
+            <h3 class="title is-5" style="color: #10B981; margin-top: 1.5rem; margin-bottom: 0.75rem;">Ground Telescopes</h3>
+            <p>
+              Compression is important for ground-based telescopes as well. The Square Kilometer Array alone will produce 62 exabytes per year starting in the late 2020s. The infrastructure costs for storing, transmitting, and processing this data represent a substantial portion of total project budgets, where compression improvements have compound economic benefits across the entire data pipeline.
             </p>
             <p>
-              With Roman's estimated cost of <strong>$4.3 billion</strong>, even a mere <strong>1% improvement in lossless compression translates to a back-of-the-envelope $43 million worth of additional scientific data</strong> that can be preserved and transmitted to Earth. Carefully designed neural compression may unlock orders-of-magnitude improvements in data handling pipelines.
-            </p>
-            <p>
-              Beyond individual missions, the broader astronomical community will soon generate <strong>exabytes of data annually</strong>. The Square Kilometer Array alone will produce 62 exabytes per year starting in the late 2020s. The infrastructure costs for storing, transmitting, and processing this data represent a substantial portion of total project budgets, where compression improvements have compound economic benefits across the entire data pipeline.
-            </p>
-            <p>
-              Our neural compression methods demonstrate that <strong>domain-specific optimization</strong> can achieve up to 20% better compression ratios than general-purpose algorithms. For space-based telescopes where every bit of downlink bandwidth is precious, these improvements have the potential to dramatically increase scientific output and discovery potential—transforming what would otherwise be lost data into preserved science.
+              Due to the high costs of these instruments, even a one to few percent improvement in compression ratio can deliver significant scientific value.
             </p>
           </div>
         </div>
@@ -541,12 +541,34 @@
 </section>
 <!-- End challenge section -->
 
-<!-- The Solution Section -->
-<section class="section hero is-light" style="padding-top: 1rem;">
+<!-- Essential Findings Section -->
+<section class="section hero is-light" style="padding-top: 1rem;"><!-- Light -->
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Our Solution: Neural Compression for Space</h2>
+        <h2 class="title is-3">Essential Findings for Future Telescope Design</h2>
+        <div class="content has-text-left">
+          <h3 class="title is-5" style="color: #06B6D4; margin-top: 1.5rem; margin-bottom: 0.75rem;">Non-neural Methods</h3>
+          <p>
+            We find that existing advanced non-neural codecs such as <strong>JPEG-XL</strong> and <strong>JPEG-LS</strong> can achieve significantly improved compression than the current astronomy standard, <strong>RICE</strong>. These algorithms are also highly efficient and compatible with most existing hardware -- both algorithms can compress a full 4K Hubble image in under a second, while the powerful JPEG-XL at max setting takes 1.5 minutes in exchange for improved compression. We believe that future space and ground optical telescopes should consider one of these algorithms.
+          </p>
+          <h3 class="title is-5" style="color: #06B6D4; margin-top: 1.5rem; margin-bottom: 0.75rem;">Neural Methods</h3>
+          <p>
+            Additionally, we explore neural methods and demonstrate their potential for the medium to long term when the necessary ML-acceleration hardware can be installed on space or ground-based telescopes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Essential Findings section -->
+
+<!-- The Solution Section -->
+<section class="hero is-small" style="padding-top: 1rem; padding-bottom: 2rem;"><!-- Dark -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Our Solution: Neural Compression</h2>
         <div class="content has-text-left">
           <p>
             Unlike traditional hand-crafted compression algorithms, <strong>neural compression learns directly from astronomical data</strong>, automatically discovering the unique patterns and structures present in space-based and ground-based imagery. By leveraging the spatial correlations of celestial objects, temporal dependencies in time-series observations, and spectral relationships across wavelengths, neural methods can achieve superior compression ratios.
@@ -568,7 +590,7 @@
  
 
 <!-- Technical Dataset Overview -->
-<section class="hero is-small" style="padding-top: 1rem;">
+<section class="section hero is-light" style="padding-top: 0rem; margin-bottom: -2rem;"><!-- Light -->
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">AstroCompress Dataset Specifications</h2>
@@ -664,7 +686,7 @@
 
 
 <!-- Comprehensive Compression Results -->
-<section class="section hero is-light" style="padding-top: 1rem;">
+<section class="hero is-small" style="padding-top: 1rem; margin-bottom: 2rem;"><!-- Dark -->
   <div class="container">
     <h2 class="title is-3 has-text-centered">Comprehensive Compression Results</h2>
     <div class="content">
@@ -830,8 +852,8 @@
 <!-- End compression results section -->
 
 <!-- Datasets and Results carousel -->
-<section class="hero is-small" style="padding-top: 1rem;">
-  <div class="hero-body">
+<section class="section hero is-light" style="padding-top: 1rem; margin-bottom: -4rem;"><!-- Light -->
+  <div class="hero-body" style="padding-bottom: 0.5rem;">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Scientific Analysis: What Makes Astronomical Images Compressible?</h2>
       
@@ -875,7 +897,7 @@
 <!-- End datasets and results carousel -->
 
 <!-- Detailed Scientific Analysis -->
-<section class="hero is-small" style="padding-top: 0rem;">
+<section class="section hero is-light" style="padding-top: 0rem; margin-bottom: -4rem;"><!-- Light (continues from above) -->
   <div class="hero-body">
     <div class="container">
      
@@ -912,7 +934,7 @@
 <!-- End scientific analysis section -->
 
 <!-- Future Directions Section -->
-<section class="section hero is-light" style="padding-top: 1rem;">
+<section class="hero is-small" style="padding-top: 1rem;"><!-- Dark -->
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-12 has-text-centered" style="margin-bottom: 0.5rem;">
@@ -937,7 +959,7 @@
               </p>
               <h3 class="title is-4 has-text-centered" style="margin-top: 1rem;">🚀 Practical Deployment</h3>
               <p>
-                The next critical step is actually deploying new compression algorithms to observatories. Today, only the older RICE compression method is primarily in use.
+                The next critical step is actually deploying new compression algorithms to observatories, starting with JPEG-XL or JPEG-LS. Today, RICE compression is the standard method in use. To this end, we are working on a PR to Astropy, integrating JPEG-XL and JPEG-LS compression methods <a href="https://github.com/astropy/astropy/pull/18083" target="_blank">[Astropy PR]</a>. We hope to follow this up with a PR to the <a href="https://github.com/HEASARC/cfitsio" target="_blank">[CFITSIO]</a> library, which hosts the fpack tool widely used to compress FITS files. Finally, we hope that in the near future, we can deploy a codec like JPEG-XL or JPEG-LS to a ground-based or space-based telescope.
               </p>
             </div>
 
