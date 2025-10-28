@@ -8,4 +8,4 @@ Visit the live project page at: [https://rithwiksud.github.io/astrocompress-site
 
 ## Contact
 
-For any questions, please email rithwik@berkeley.edu or tuannt2@uci.edu
+For any questions, please email rithwik@berkeley.edu and tuannt2@uci.edu
